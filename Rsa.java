@@ -35,7 +35,6 @@ import org.apache.http.util.EntityUtils;
 import org.ballerinalang.bre.Context;
 import org.ballerinalang.bre.bvm.BlockingNativeCallableUnit;
 import org.ballerinalang.model.types.TypeKind;
-// import org.ballerinalang.model.values.BMap;
 import org.ballerinalang.model.values.BString;
 import org.ballerinalang.model.values.BValue;
 import org.ballerinalang.natives.annotations.Argument;
@@ -52,17 +51,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
-// import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-// import java.security.InvalidKeyException;
 import java.security.Key;
-// import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
-// import java.security.Signature;
-// import java.security.SignatureException;
-// import java.security.Signer;
 import java.security.spec.InvalidKeySpecException;
 import java.text.SimpleDateFormat;
 import java.util.Base64;
@@ -144,7 +137,6 @@ public class Rsa extends BlockingNativeCallableUnit {
         
                     request = new HttpGet(uriString);
                     signer.signRequest(request);
-                    // result = request.getFirstHeader("Authorization").toString();
                     @SuppressWarnings({ "deprecation", "resource" })
                     HttpClient client = new DefaultHttpClient();
                     HttpResponse httpResponse = client.execute(request);
@@ -159,8 +151,6 @@ public class Rsa extends BlockingNativeCallableUnit {
             default:
                 throw new BallerinaException("Unsupported HTTP Request method " + method + " for RSA calculation");
         }
-        // context.setReturnValues(new BString(result));
-        // context.setReturnValues(new BMap<String, BValue>(request));
         context.setReturnValues(new BString(responseString));
     }
 

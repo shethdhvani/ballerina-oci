@@ -218,7 +218,8 @@
                 <include>com.google.guava:guava</include>
                 <include>org.apache.httpcomponents:httpclient</include>
                 <include>org.apache.httpcomponents:httpcore</include>
-                <include>org.tomitribe:tomitribe-http-signatures</include>          
+                <include>org.tomitribe:tomitribe-http-signatures</include>
+                <!-- End DS -->          
             </includes>
         </dependencySet>
 
