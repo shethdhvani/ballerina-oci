@@ -19,3 +19,5 @@ Copy pom_crypto.bal to the below location and rename it to pom.xml:
 
 Copy bin.xml to the below location:
 <BAL_SOURCE>/distribution/zip/ballerina/src/assembly
+
+Build ballerina. Extract the ballerina distribution and call the function.
