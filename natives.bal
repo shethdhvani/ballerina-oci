@@ -59,10 +59,12 @@ public extern function crc32(any content) returns (string);
 
 # Returns the RSA-SHA256 signed value of the provided base string.
 #
-# + signingString - The string to be signed
+# + uriString - The uri string
 # + privateKeyPath - The path to the private key
+# + apiKey - The apiKey required
+# + method - The REST method
 # + keyEncoding - The encoding of the key
 # + algorithm - The signing algorithm to be used
 # + return - The signed string
-public extern function rsa(string signingString, string privateKeyPath, Encoding? keyEncoding = (), Algorithm algorithm) 
-    returns (string);
+public extern function rsa(string uriString, string privateKeyPath, string apiKey, string method,
+    Encoding? keyEncoding = (), Algorithm algorithm) returns (string);
