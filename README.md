@@ -21,3 +21,5 @@ Copy bin.xml to the below location:
 <BAL_SOURCE>/distribution/zip/ballerina/src/assembly
 
 Build ballerina. Extract the ballerina distribution and call the function.
+
+Use ListInstance.bal example to list all compute instances in a compartment on Oracle Cloud
