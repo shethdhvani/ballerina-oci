@@ -2,7 +2,7 @@
 
 Sign an http request using RSA SHA256 algorithm and returns the authorization header. As of now only GET requests are supported and SHA256 algorithm.
 
-Call the function *crypto:rsa* by passing reuest URI, path to the private key (.pem), api key id, "GET", "SHA256".
+Call the function *crypto:rsa* by passing request URI, path to the private key (.pem), api key id, "GET", "SHA256".
 
 This is tested with Ballerina 0.990.0 source code
 
